@@ -22,3 +22,8 @@ jobs:
       run: |
         cd ../build-class
         ctest
+
+    - name: Results
+      run: |
+        cd ../build-class/Testing/Temporary
+        cat LastTest.log
