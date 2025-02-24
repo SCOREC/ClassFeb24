@@ -17,3 +17,8 @@ jobs:
 
     - name: Build
       run: ./install.sh
+
+    - name: Test
+      run: |
+        cd ../build-class
+        ctest
