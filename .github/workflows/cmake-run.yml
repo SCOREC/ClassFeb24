@@ -10,13 +10,17 @@ jobs:
       run:
         shell: bash
 
+    strategy:
+      matrix:
+        compiler: [g++, clang++]
+
     steps:
 
     - name: Checkout repo
       uses: actions/checkout@v4
 
     - name: Build
-      run: ./install.sh
+      run: ./install.sh ${{matrix.compiler}}
 
     - name: Test
       run: |
