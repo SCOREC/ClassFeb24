@@ -8,6 +8,6 @@ cmake --build ../build-Catch2 -j8 --target install
 export CMAKE_PREFIX_PATH=$CMAKE_PREFIX_PATH:../build-Catch2/install
 
 cmake . -B ../build-class \
-  -DCMAKE_BUILD_TYPE=Release \
+  -DCMAKE_BUILD_TYPE=RelWithDebInfo \
   -DCMAKE_CXX_COMPILER=$compiler
 cmake --build ../build-class -j8
